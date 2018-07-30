@@ -37,6 +37,18 @@ body {
   height: 35px;
 }
 
+.logo:hover {
+  animation: moveInRight 2s ease-in;
+
+  /* ちらつき防止(どれも効かない) */
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+
 .text-box {
   position: absolute;
   top: 40%;
@@ -47,6 +59,8 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
