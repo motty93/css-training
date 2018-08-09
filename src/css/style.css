@@ -101,7 +101,7 @@ body {
     transform: translateX(-100px);
   }
 
-  80% {
+  70% {
     transform: translateX(10px);
   }
 
@@ -117,7 +117,7 @@ body {
     transform: translateX(100px);
   }
 
-  80% {
+  70% {
     transform: translateX(-10px);
   }
 
