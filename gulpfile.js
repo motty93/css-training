@@ -3,9 +3,10 @@ var gulp = require('gulp'),
 var SERVER_PORT = 4000;
 
 var paths = [
-  "./src/css/*.css",
-  "./src/js/*.js",
-  "./src/*.html"
+  "./src/**/*.css",
+  "./src/**/*.js",
+  "./src/*.html",
+  "./src/**/*.html"
 ];
 
 gulp.task('server', function() {
