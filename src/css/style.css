@@ -26,17 +26,17 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 40px;
   left: 40px;
 }
 
-.logo {
+.header__logo {
   height: 35px;
 }
 
-.logo:hover {
+.header__logo:hover {
   animation: moveInRight 2s ease-in;
 
   /* ちらつき防止(どれも効かない) */
@@ -48,7 +48,7 @@ body {
   -webkit-transform-style: preserve-3d;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -60,16 +60,17 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 60px;
+  left: 5%;
 
   /* animationの揺れ防止 */
   backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 30px;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -82,11 +83,11 @@ body {
   */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 13px;
 
   animation: moveInRight 1s ease-in;
 
@@ -162,11 +163,12 @@ body {
   box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
 
+/* ボタンの広がりを表現する  */
 .btn::after {
   content: "";
   display: inline-block;
@@ -180,7 +182,7 @@ body {
   transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -189,7 +191,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
 }
