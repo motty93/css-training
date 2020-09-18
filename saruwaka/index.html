@@ -45,6 +45,23 @@
         width: 50px;
         border-radius: 10px;
       }
+      .test1 {
+        width: 200px;
+        background: skyblue;
+      }
+      .test2 {
+        width: 100px;
+        background: skyblue;
+      }
+      .nomin {
+        background: gray;
+        width: 50%
+      }
+      .min {
+        background: orange;
+        width: 50%;
+        min-width: 100px;
+      }
     </style>
   </head>
   <body>
@@ -70,6 +87,16 @@
             <img src="https://saruwakakun.com/wp-content/uploads/2016/11/IMG_9164.jpeg" alt="サルワカくんの顔"/>
           </p>
         </div>
+      </div>
+      <p>親要素大きめの場合</p>
+      <div class="test1">
+        <p class="nomin">最小幅なし</p>
+        <p class="min">最小幅100px</p>
+      </div>
+      <p>親要素小さめの場合</p>
+      <div class="test2">
+        <p class="nomin">最小幅なし</p>
+        <p class="min">最小幅100px</p>
       </div>
     </div>
     <div>
