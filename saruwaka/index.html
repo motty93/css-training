@@ -29,6 +29,9 @@
         padding: 10px;
         background-color: orange;
       }
+      div {
+        padding-right: 10px;
+      }
       a {
         color: red;
       }
@@ -53,6 +56,14 @@
         width: 100px;
         background: skyblue;
       }
+      .test3 {
+        width: 200px;
+        background: skyblue;
+      }
+      .test4 {
+        width: 100px;
+        background: skyblue;
+      }
       .nomin {
         background: gray;
         width: 50%
@@ -61,6 +72,20 @@
         background: orange;
         width: 50%;
         min-width: 100px;
+      }
+      .nomax {
+        background: gray;
+        width: 80%;
+      }
+      .max {
+        background: orange;
+        width: 80%;
+        max-width: 100px;
+      }
+      .image-test>img {
+        width: 100px;
+        max-width: 100%;
+        height: auto;
       }
     </style>
   </head>
@@ -88,15 +113,37 @@
           </p>
         </div>
       </div>
-      <p>親要素大きめの場合</p>
-      <div class="test1">
-        <p class="nomin">最小幅なし</p>
-        <p class="min">最小幅100px</p>
+      <h3>min-widthについて</h3>
+      <div class="min-width__test">
+        <p>親要素大きめの場合</p>
+        <div class="test1">
+          <p class="nomin">最小幅なし</p>
+          <p class="min">最小幅100px</p>
+        </div>
+        <p>親要素小さめの場合</p>
+        <div class="test2">
+          <p class="nomin">最小幅なし</p>
+          <p class="min">最小幅100px</p>
+        </div>
       </div>
-      <p>親要素小さめの場合</p>
-      <div class="test2">
-        <p class="nomin">最小幅なし</p>
-        <p class="min">最小幅100px</p>
+      <h3>max-widthについて</h3>
+      <div class="max-width__test">
+        <p>親要素小さめの場合</p>
+        <div class="test4">
+          <p class="nomax">最大幅なし</p>
+          <p class="max">最大幅100px</p>
+        </div>
+
+        <p>親要素大きめの場合</p>
+        <div class="test3">
+          <p class="nomax">最大幅なし</p>
+          <p class="max">最大幅100px</p>
+        </div>
+
+        <p>imageテスト</p>
+        <p class="image-test">
+          <img src="https://saruwakakun.com/wp-content/uploads/2016/11/IMG_9164.jpeg" />
+        </p>
       </div>
     </div>
     <div>
