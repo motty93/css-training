@@ -79,10 +79,30 @@
         width: 80%;
         max-width: 100px;
       }
-      .image-test>img {
+      .image-test img {
         width: 100px;
         max-width: 100%;
         height: auto;
+        border-radius: 10px;
+      }
+
+      /* menu bar */
+      nav ul {
+        list-style-type: none; /* ulの・を無くす */
+        text-align: center;
+      }
+      nav ul li {
+        display: inline-block;
+        width: 120px;
+        padding: 10px 0;
+        margin: 20px 0;
+        vertical-align: middle;
+        background: skyblue;
+      }
+      nav ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
       }
     </style>
   </head>
@@ -90,10 +110,11 @@
     <header>
       <h1>サルワカ今更やってくよ</h1>
       <nav>
-      <ul>
-        <li><a href="/">メニュー1</a></li>
-        <li><a href="/">メニュー1</a></li>
-      </ul>
+        <ul>
+          <li><a href="./index.html">ホーム</a></li>
+          <li><a href="./index.html">ブログ</a></li>
+          <li><a href="./index.html">ポートフォリオ</a></li>
+        </ul>
       </nav>
     </header>
     <div class="wrap">
