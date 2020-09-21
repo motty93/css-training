@@ -26,14 +26,9 @@
         color: black;
         border: solid 2px gray;
         border-radius: 5px;
+        box-sizing: border-box;
         padding: 10px;
         background-color: orange;
-      }
-      div {
-        padding-right: 10px;
-      }
-      a {
-        color: red;
       }
       #main_contents {
         text-align: center;
@@ -42,10 +37,12 @@
         width: 200px;
       }
       p.example {
+      /* TODO: pタグにbox-sizing:をつけると変になる(なっている) */
+      /* .example imgでwidth: autoつけて対応 */
         width: 50px;
       }
       .example img {
-        width: 50px;
+        width: 100%;
         border-radius: 10px;
       }
       .test1 {
