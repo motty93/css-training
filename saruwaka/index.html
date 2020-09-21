@@ -19,6 +19,8 @@
       body {
         color: gray;
         font-size: 14px;
+        font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+        background: #F0EBEB;
         width: 620px;
         margin: 0 auto;
       }
@@ -31,7 +33,10 @@
         background-color: orange;
       }
       #main_contents {
-        text-align: center;
+      /* よりブログやメディアっぽい見出しに */
+        border-left: solid 5px orange;
+        border-bottom: solid 1px gray;
+        padding: 10px;
       }
       .parent {
         width: 200px;
@@ -97,12 +102,13 @@
         padding: 10px 0;
         margin: 20px 0;
         vertical-align: middle;
-        background: skyblue;
+        background: white;
       }
       nav ul li a {
         text-decoration: none;
         font-weight: bold;
-        color: white;
+        /* color: #F0EBEB; */
+        color: gray;
       }
     </style>
   </head>
@@ -119,9 +125,9 @@
     </header>
     <div class="wrap">
       <div class="main">
-        <div class="main_inner" id="main_contents">
-          <p>コンテンツはここですな</p>
-        </div>
+        <h3 class="main_inner" id="main_contents">
+          コンテンツはここですな
+        </h3>
         <div class="parent">
           <p>これは要素です</p>
         </div>
