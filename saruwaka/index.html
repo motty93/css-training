@@ -110,6 +110,29 @@
         /* color: #F0EBEB; */
         color: gray;
       }
+
+      .hover-link {
+        font-weight: bold;
+        background: skyblue;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+        text-decoration: none;
+      }
+
+      .hover-link:hover {
+        background: silver;
+      }
+
+      a:hover img {
+        filter: alpha(opacity=70);
+        -moz-opacity: 0.7;
+        opacity: 0.7;
+      }
+
+      /* a:visited { */
+      /*   color: silver; */
+      /* } */
     </style>
   </head>
   <body>
@@ -169,8 +192,15 @@
           <img src="https://saruwakakun.com/wp-content/uploads/2016/11/IMG_9164.jpeg" />
         </p>
       </div>
+      <div class="images-wrapper">
+        <a class="hover-link" href="https://saruwakakun.com/">
+          サルワカへ
+        </a>
+        <p>
+          <a href="https://saruwakakun.com/"><img src="https://saruwakakun.com/wp-content/uploads/2016/11/IMG_9164.jpeg" alt="サルワカくんの顔" /></a>
+        </p>
+      </div>
     </div>
-    <div>
     <footer>
       <div class="footer_wrapper">
         <small>motty93.com</small>
