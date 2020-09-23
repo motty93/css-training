@@ -15,6 +15,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://kit.fontawesome.com/f14c4d8cd2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="font-awesome-animation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
     <link rel="shortcut icon" href="">
     <style>
       body {
@@ -151,7 +153,16 @@
       .bomb:after {
         font-family: "Font Awesome 5 Free";
         content: '\f1e2';
+        /* solidであれば900, regularであれば400。font-weightは必ず必要. */
         font-weight: 900;
+      }
+
+      h2:before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f00c';
+        font-weight: 900;
+        padding-right: 5px;
+        color: #f89174;
       }
     </style>
   </head>
@@ -221,6 +232,7 @@
         </p>
       </div>
       <div>
+        <h2>見出しにアイコンを使おう</h2>
         <!-- <p><i class="fab fa&#45;twitter fa&#45;lg"></i>ここにアイコンを表示します</p> -->
         <p><i class="fab fa-twitter fa-2x fa-fw fa-rotate-180"></i>ここにアイコンを表示します</p>
         <span class="fa-stack">
@@ -232,6 +244,8 @@
         <p><i class="fas fa-tag tag-yellow"></i></p>
         <p><i class="fas fa-tasks fa-border"></i></p>
         <p>これは<span class="bomb">爆弾</span>です</p>
+        <h2>font animation</h2>
+        <p><i class="fab fa-twitter faa-wrench animated-hover"></i></p>
       </div>
     </div>
     <footer>
