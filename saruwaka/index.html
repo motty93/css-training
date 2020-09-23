@@ -134,6 +134,25 @@
       /* a:visited { */
       /*   color: silver; */
       /* } */
+
+      .tag-gray {
+        color: gray;
+      }
+      .tag-yellow {
+        color: yellow;
+      }
+      .tag-skyblue {
+        color: skyblue;
+      }
+      .twitter-icon {
+        color: white;
+      }
+
+      .bomb:after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f1e2';
+        font-weight: 900;
+      }
     </style>
   </head>
   <body>
@@ -202,7 +221,17 @@
         </p>
       </div>
       <div>
-        <p><i class="fab fa-twitter"></i>ここにアイコンを表示します</p>
+        <!-- <p><i class="fab fa&#45;twitter fa&#45;lg"></i>ここにアイコンを表示します</p> -->
+        <p><i class="fab fa-twitter fa-2x fa-fw fa-rotate-180"></i>ここにアイコンを表示します</p>
+        <span class="fa-stack">
+          <i class="fas fa-cloud fa-stack-2x"></i>
+          <i class="fab fa-twitter fa-stack-1x twitter-icon"></i>
+        </span>
+        <p><i class="fas fa-tag tag-gray fa-spin"></i></p>
+        <p><i class="fas fa-tag tag-skyblue fa-flip-horizontal"></i></p>
+        <p><i class="fas fa-tag tag-yellow"></i></p>
+        <p><i class="fas fa-tasks fa-border"></i></p>
+        <p>これは<span class="bomb">爆弾</span>です</p>
       </div>
     </div>
     <footer>
