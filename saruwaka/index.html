@@ -164,6 +164,30 @@
         padding-right: 5px;
         color: #f89174;
       }
+
+      .table-of-contents {
+        width: 290px;
+        max-height: 240px;
+        overflow-y: auto;
+      }
+
+      .table-of-contents ul {
+        border: 2px silver dashed;
+        padding: 10px 10px 10px 30px;
+        font-size: 14px;
+      }
+
+      .table-of-contents li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .table-of-contents ol {
+        padding-left: 0;
+        border-bottom: solid 2px silver;
+        list-style-type: none;
+        font-size: 12px;
+      }
     </style>
   </head>
   <body>
@@ -246,6 +270,20 @@
         <p>これは<span class="bomb">爆弾</span>です</p>
         <h2>font animation</h2>
         <p><i class="fab fa-twitter faa-wrench animated-hover"></i></p>
+      </div>
+      <div class="table-of-contents">
+        <ul>
+          <li>アプリ</li>
+          <li>
+            WEBデザイン
+            <ol>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ol>
+          </li>
+          <li>イラスト</li>
+        </ul>
       </div>
     </div>
     <footer>
