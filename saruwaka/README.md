@@ -138,3 +138,34 @@ paddingとmarginの間でも相殺は起きない
 `text-shadow: 影の右への長さ 影の下への長さ 影のぼけ具合 影の色`
 
 文字が見にくくならないように、値は小さくする。また、影の色はgrayかsilverあたりにすると自然な影らしくなる
+
+### position
+基本的にtop, bottom, left, rightと一緒に使用する
+
+* positionで基準を決める
+* top bottom left rightで具体的な位置を数字で調整する
+
+top/bottom/left/rightは基準からの距離で指定する
+
+#### static
+
+* 初期値がこれになっている
+* 要素は通常の位置になり、上下左右に動かせない
+* z-indexを指定できない
+
+#### relative
+
+現在の表示位置から相対的に要素の位置を動かしたいときに使用する
+
+→z-indexやtopなどが指定できないときはrelativeにする
+
+#### absolute
+
+親要素を基準にした絶対位置
+
+親要素はrelativeかfixedを指定しておく(標準位置がずれて思ったように表示されないときがある)
+
+
+#### fixed
+
+ウィンドウ全体が基準位置。

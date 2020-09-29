@@ -188,6 +188,54 @@
         list-style-type: none;
         font-size: 12px;
       }
+
+      #relative {
+        position: relative;
+        top: 10px;
+        left: 10px;
+      }
+
+      .parent {
+        position: relative;
+        padding: 20px;
+      }
+
+      #absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      #example {
+        position: relative;
+        padding: 0;
+        width: 50%;
+      }
+
+      #example img {
+        width: 50%;
+      }
+
+      #example span {
+        position: absolute;
+        bottom: 2px;
+        right: 0;
+        color: white;
+        background: skyblue;
+        padding: 0 2px;
+        line-height: 1.5;
+      }
+
+      #fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+        background: #ffc778;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -285,6 +333,19 @@
           <li>イラスト</li>
         </ul>
       </div>
+      <div>
+        <p>指定なし</p>
+        <p id="relative">relative</p>
+      </div>
+      <div class="parent">
+        <p>要素１</p>
+        <p id="absolute">要素２</p>
+      </div>
+      <div id="example">
+        <img src="bear.jpg" alt="クマ"/>
+        <span>クマさん</span>
+      </div>
+      <div id="fixed">fixed</div>
     </div>
     <footer>
       <div class="footer_wrapper">
