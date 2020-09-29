@@ -7,15 +7,13 @@
     <meta name="description" content="ここはページの説明を120文字程度でいれます。">
     <meta name="author" content="カンマ,区切り">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     <!--[if lt IE 9]>
     <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.min.js'></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://kit.fontawesome.com/f14c4d8cd2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="font-awesome-animation.min.css">
+    <!-- <link rel="stylesheet" href="font&#45;awesome&#45;animation.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
     <link rel="shortcut icon" href="">
     <style>
@@ -236,6 +234,40 @@
         background: #ffc778;
         color: white;
       }
+
+      #index {
+        position: relative;
+      }
+
+      .one, .two, .three {
+        position: absolute;
+      }
+
+      .one {
+        z-index: 100;
+        top: 0;
+        left: 0;
+      }
+
+      .two {
+        z-index: 50;
+        top: 20px;
+        left: 20px;
+      }
+
+      .three {
+        z-index: 40;
+        top: 40px;
+        left: 40px;
+      }
+
+      .overflow-exam {
+        white-space: nowrap;
+        width: 100px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        background: skyblue;
+      }
     </style>
   </head>
   <body>
@@ -346,10 +378,16 @@
         <span>クマさん</span>
       </div>
       <div id="fixed">fixed</div>
+      <p class="overflow-exam">asdfasdfasdfasdfasdfasdfasdfasdfasdf</p>
     </div>
     <footer>
       <div class="footer_wrapper">
         <small>motty93.com</small>
+      </div>
+      <div id="index">
+        <p class="one">one</p>
+        <p class="two">two</p>
+        <p class="three">three</p>
       </div>
     </footer>
   </body>

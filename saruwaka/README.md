@@ -169,3 +169,24 @@ top/bottom/left/rightは基準からの距離で指定する
 #### fixed
 
 ウィンドウ全体が基準位置。
+
+
+
+### overflow
+
+要素のボックスからはみ出た部分をどう扱うか？を指定する
+
+* visible 初期値。はみ出た部分がそのまま表示される場合あり
+* hidden はみ出た部分が隠れる
+* scroll はみ出た部分が隠れてスクロールできる状態に
+* auto ブラウザにより表示がかわる（基本はスクロールと同じ状態）
+
+#### 横スクロールさせる
+
+`overflow: scroll`に加えて`white-space: nowrap`を指定する
+
+#### 使わないスクロールバーを非表示にする
+
+使う座標を指定する
+
+ex) `overflow-x: scroll`だけを指定する or `overflow-y: hidden`も追加で指定する
