@@ -190,3 +190,30 @@ top/bottom/left/rightは基準からの距離で指定する
 使う座標を指定する
 
 ex) `overflow-x: scroll`だけを指定する or `overflow-y: hidden`も追加で指定する
+
+
+### white-space
+
+半角スペース・タブ・改行の表示方法を決める
+
+* normal 半角スペースは一つにまとめられる・改行も同様 自動で折り返し
+* nowrap 半角スペースは一つにまとめられる・改行も同様 折り返しされない
+* pre-line 半角スペースやtabはまとまる・改行は反映される 自動で折り返し
+* pre 入力したスペース関連は全て表示される 折り返されない
+* pre-wrap 入力したスペース関// 隙間を作るかどうかのプロパティ連は全て表示される 自動で折り返し
+
+
+### table
+
+tr, th, tdで作成する。
+
+borderは基本cssに記載すること。
+
+`border-collapse`を要チェック。
+
+レスポンシブデザインに対応するときはwidth: 100%を指定して対応する。
+
+
+#### セルの結合
+
+`rowspan`と`colspan`をチェック。rowspanは縦方向、colspanは横方向。

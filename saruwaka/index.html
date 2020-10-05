@@ -262,11 +262,69 @@
       }
 
       .overflow-exam {
-        white-space: nowrap;
+        white-space: normal;
         width: 100px;
         overflow-x: scroll;
         overflow-y: hidden;
         background: skyblue;
+      }
+
+      .white-space_nowrap {
+        white-space: nowrap;
+        width: 100px;
+        background: skyblue;
+      }
+
+      .white-space {
+        white-space: normal;
+        width: 100px;
+        background: skyblue;
+      }
+
+      .white-space_preline {
+        white-space: pre-line;
+        width: 100px;
+        background: skyblue;
+      }
+
+      .white-space_pre {
+        white-space: pre;
+        width: 100px;
+        background: skyblue;
+      }
+
+      .white-space_prewrap {
+        white-space: pre-wrap;
+        width: 100px;
+        background: skyblue;
+      }
+
+      .tag-test {
+        width: 60px;
+        height: 200px;
+        background: orange;
+      }
+
+      table th, table td {
+        border: dashed 1px orange;
+      }
+
+      table {
+        text-align: center;
+        border-collapse: collapse;
+        border: solid 2px orange;
+        width: 300px;
+      }
+
+      table th {
+        padding: 10px;
+        color: skyblue;
+        background: #fff5e5;
+      }
+
+      table td {
+        padding: 3px 10px;
+        color: gray;
       }
     </style>
   </head>
@@ -379,6 +437,44 @@
       </div>
       <div id="fixed">fixed</div>
       <p class="overflow-exam">asdfasdfasdfasdfasdfasdfasdfasdfasdf</p>
+      <p class="white-space">これは例文です。
+
+        これは例文です。これは例文です    </p>
+      <!-- はみ出した場合overflowを指定してうまくやる -->
+      <p class="white-space_nowrap">これは例文です。
+
+        これは例文です。これは例文です    </p>
+
+      <p class="white-space_preline">これは例文です。
+
+        これは例文です。これは例文です    </p>
+
+      <p class="white-space_pre">これは例文です。
+
+        これは例文です。これは例文です    </p>
+
+      <p class="white-space_prewrap">これは例文です。
+
+        これは例文です。これは例文です    </p>
+      <div class="tag-test">
+        <p>例文です</p>
+        <p>例文です</p>
+      </div>
+      <p>例文です</p>
+      <p>例文です</p>
+      <table>
+        <tr>
+          <th colspan="2">果物</th>
+        </tr>
+        <tr>
+          <td>いちご</td>
+          <td>れもん</td>
+        </tr>
+        <tr>
+          <td>甘い</td>
+          <td>すっぱい</td>
+        </tr>
+      </table>
     </div>
     <footer>
       <div class="footer_wrapper">
