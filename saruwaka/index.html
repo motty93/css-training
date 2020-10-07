@@ -96,6 +96,8 @@
       nav ul {
         list-style-type: none; /* ulの・を無くす */
         text-align: center;
+        padding: 0;
+        margin-top: 20px;
       }
       nav ul li {
         display: inline-block;
@@ -233,6 +235,7 @@
         width: 100%;
         background: #ffc778;
         color: white;
+        z-index: 100;
       }
 
       #index {
@@ -326,13 +329,81 @@
         padding: 3px 10px;
         color: gray;
       }
+
+      .header-sample {
+        text-align: center;
+        position: relative;
+        top: 50px;
+      }
+
+      .header-sample:before {
+        content: "PORTFOLIO";
+        color: gray;
+        font-size: 2em;
+        display: block;
+      }
+
+      .header-navbar {
+        text-align: center;
+        position: relative;
+        top: 20px;
+      }
+
+      h4 {
+        position: relative;
+        padding: 2em;
+        background: silver;
+      }
+      h4:before {
+        position: absolute;
+        content: 'ラベル';
+        top: 0;
+        left: 0;
+        color: white;
+        padding: 0.2em;
+        background: #F89174;
+      }
+
+      .flow {
+        text-align: center;
+        list-style-type: none;
+      }
+
+      .flow li:not(:last-child):after{
+        font-family: 'FontAwesome';
+        content: '\f0a7';
+        display: block;
+        font-size: 2em;
+        color: skyblue;
+        padding: 0.3em;
+      }
+
+      .bubble {
+        position: relative;
+        background: orange;
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      .bubble:before {
+        position: absolute;
+        content: "";
+        border-top: 20px solid orange;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        top: 100%; /* 下固定 */
+        left: 50%; /* 中央へ */
+        transform: translateX(-50%);
+      }
     </style>
   </head>
   <body>
     <header>
       <div id="fixed">fixed</div>
-      <h1>サルワカ今更やってくよ</h1>
-      <nav>
+      <h1 class="header-sample">サルワカ今更やってくよ</h1>
+      <nav class="header-navbar">
         <ul>
           <li><a href="./index.html">ホーム</a></li>
           <li><a href="./index.html">ブログ</a></li>
@@ -475,7 +546,14 @@
           <td>すっぱい</td>
         </tr>
       </table>
+      <h4>疑似要素使ってるよ</h4>
     </div>
+    <ul class="flow">
+      <li>最初はこれ</li>
+      <li>次にこれ</li>
+      <li>最後はこれ</li>
+    </ul>
+    <div class="bubble">コメントです</div>
     <footer>
       <div class="footer_wrapper">
         <small>motty93.com</small>
