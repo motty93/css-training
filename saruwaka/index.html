@@ -432,6 +432,18 @@
         background: -moz-linear-gradient(top, #FFC778, transparent);
         background: linear-gradient(to bottom, #FFC778, transparent);
       }
+
+      .overlay-gradation {
+        background: -moz-linear-gradient(65deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)), url(./bear.jpg);
+        background: -webkit-linear-gradient(65deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)), url(./bear.jpg);
+        background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)), url(./bear.jpg);
+        background-size:cover;
+        /*以下グラデーションとは関係のない部分*/
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        color: #FFF;
+      }
     </style>
   </head>
   <body>
@@ -602,6 +614,7 @@
     <div class="transparent-gradation">
       transparent
     </div>
+    <div class="overlay-gradation">OVERLAY</div>
     <footer>
       <div class="footer_wrapper">
         <small>motty93.com</small>
