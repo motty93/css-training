@@ -26,11 +26,12 @@ inline-blockやblockは指定できる
 →親が600pxなら子は600px以下になる
 
 #### 100%とautoの違い
-autoだとpaddingやbotderが含まれる
+autoだとpaddingやborderが含まれる
 
 100%だと含まれない
 →border paddingを指定してると、その分だけ親要素からはみ出す可能性がある
-    box-sizing: border-boxプロパティをしようするとよい
+
+box-sizing: border-boxプロパティを使用するとよい
 https://saruwakakun.com/html-css/reference/box-sizing
 
 inline-blockだとwidth:100%じゃないと横いっぱいに広がらない
@@ -247,5 +248,57 @@ before/afterだとラベルを貼ったり、吹き出しの三角を作れた�
 
 文字を入れると疑似要素に応じて表示できる。画像も可能。
 
-※ただし画像のサイズは変更不可（`width: oopx`と書いても効かない）
+※ただし画像のサイズは変更不可（`width: 〇〇px`と書いても効かない）
 
+### グラデーション
+backgroundに対して指定する
+
+* 線形（一方向）: linear-gradient(色)
+* 円形: radial-gradient(色)
+
+IE9以下は対応していない
+
+#### ベンダープレフィックスはつけておく
+
+`-moz-`や`-webkit-`
+
+* background: -moz-linear-gradient();
+* background: -webkit-linear-gradient();
+* backgroudn: linear-gradient();
+
+上記３つセットで書くと良い。
+
+#### 基本的な書き方
+
+* background: -moz-linear-gradient(開始位置, 開始色, 終了色);
+* background: -webkit-linear-gradient(開始位置, 開始色, 終了色);
+* backgroudn: linear-gradient(to 方向, 開始色, 終了色);
+
+３色以上にする場合はカンマ区切りで書く
+
+```
+background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+background: -webkit-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+background: linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+```
+％を加えて位置も指定できる
+
+#### 斜めにグラデーションをかける
+
+##### 開始位置を左上や右上にする
+
+```
+background: -moz-linear-gradient(top left, #FFF, #FFC778);
+background: -webkit-linear-gradient(top left, #FFF, #FFC778);
+background: linear-gradient(to bottom right, #FFF, #FFC778);
+```
+
+#### 円形グラデーション
+
+```
+background: -moz-radial-gradient(中央の色, 外側の色);
+background: -webkit-radial-gradient(中央の色, 外側の色);
+background: radial-gradient(中央の色, 外側の色);
+```
+
+linear-gradientとほとんど同じ

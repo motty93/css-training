@@ -397,6 +397,41 @@
         left: 50%; /* 中央へ */
         transform: translateX(-50%);
       }
+
+      .circle {
+        display: inline-block;
+        text-align: center;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        background: skyblue;
+        color: #FFF;
+      }
+
+      .gradation {
+        padding: 4em;
+        margin: 1em;
+        background: -moz-linear-gradient(top, #FFC778, #FFF);
+        background: -webkit-linear-gradient(top, #FFC778, #FFF);
+        background: linear-gradient(to bottom, #FFC778, #FFF);
+      }
+
+      .circle-gradation {
+        padding: 4em;
+        margin-top: 2em;
+        background: -moz-radial-gradient(#ffc778 20%, #f13f79 70%);
+        background: -webkit-radial-gradient(#ffc778 20%, #f13f79 70%);
+        background: radial-gradient(#ffc778 20%, #f13f79 70%);
+      }
+
+      .transparent-gradation {
+        padding: 4em;
+        margin-top: 2em;
+        background: -webkit-linear-gradient(top, #FFC778, transparent);
+        background: -moz-linear-gradient(top, #FFC778, transparent);
+        background: linear-gradient(to bottom, #FFC778, transparent);
+      }
     </style>
   </head>
   <body>
@@ -554,6 +589,19 @@
       <li>最後はこれ</li>
     </ul>
     <div class="bubble">コメントです</div>
+    <!-- 円の中身が二行以上になりそうな場合はpositionを使って配置する -->
+    <div class="circle">
+      11
+    </div>
+    <div class="gradation">
+      MUSCLE
+    </div>
+    <div class="circle-gradation">
+      circle
+    </div>
+    <div class="transparent-gradation">
+      transparent
+    </div>
     <footer>
       <div class="footer_wrapper">
         <small>motty93.com</small>
