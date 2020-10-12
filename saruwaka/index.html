@@ -214,6 +214,11 @@
 
       #example img {
         width: 50%;
+        transition: .5s;
+      }
+
+      #example img:hover {
+        opacity: 0.5;
       }
 
       #example span {
@@ -407,6 +412,16 @@
         border-radius: 50%;
         background: skyblue;
         color: #FFF;
+      }
+
+      .circle-border {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        line-height: 80px;
+        border-radius: 50%;
+        border: solid 3px skyblue;
       }
 
       .gradation {
@@ -671,6 +686,7 @@
     <div class="circle">
       11
     </div>
+    <span class="circle-border">109</span>
     <div class="gradation">
       MUSCLE
     </div>
