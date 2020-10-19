@@ -1,0 +1,492 @@
+body {
+  color: gray;
+  font-size: 14px;
+  font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+  background: #F0EBEB;
+  width: 620px;
+  margin: 0 auto;
+}
+p {
+  color: black;
+  border: solid 2px gray;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: orange;
+}
+#main_contents {
+/* よりブログやメディアっぽい見出しに */
+  border-left: solid 5px orange;
+  border-bottom: solid 1px gray;
+  padding: 10px;
+}
+.parent {
+  width: 200px;
+}
+p.example {
+/* TODO: pタグにbox-sizing:をつけると変になる(なっている) */
+/* .example imgでwidth: autoつけて対応 */
+  width: 50px;
+}
+.example img {
+  width: 100%;
+  border-radius: 10px;
+}
+.test1 {
+  width: 200px;
+  background: skyblue;
+}
+.test2 {
+  width: 100px;
+  background: skyblue;
+}
+.test3 {
+  width: 200px;
+  background: skyblue;
+}
+.test4 {
+  width: 100px;
+  background: skyblue;
+}
+.nomin {
+  background: gray;
+  width: 50%
+}
+.min {
+  background: orange;
+  width: 50%;
+  min-width: 100px;
+}
+.nomax {
+  background: gray;
+  width: 80%;
+}
+.max {
+  background: orange;
+  width: 80%;
+  max-width: 100px;
+}
+.image-test img {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* menu bar */
+nav ul {
+  list-style-type: none; /* ulの・を無くす */
+  text-align: center;
+  padding: 0;
+  margin-top: 20px;
+}
+nav ul li {
+  display: inline-block;
+  width: 120px;
+  padding: 10px 0;
+  margin: 20px 0;
+  vertical-align: middle;
+  background: white;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  /* color: #F0EBEB; */
+  color: gray;
+}
+
+.hover-link {
+  font-weight: bold;
+  background: skyblue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.hover-link:hover {
+  background: silver;
+}
+
+a:hover img {
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+}
+
+/* a:visited { */
+/*   color: silver; */
+/* } */
+
+.tag-gray {
+  color: gray;
+}
+.tag-yellow {
+  color: yellow;
+}
+.tag-skyblue {
+  color: skyblue;
+}
+.twitter-icon {
+  color: white;
+}
+
+.bomb:after {
+  font-family: "Font Awesome 5 Free";
+  content: '\f1e2';
+  /* solidであれば900, regularであれば400。font-weightは必ず必要. */
+  font-weight: 900;
+}
+
+h2:before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f00c';
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f89174;
+}
+
+.table-of-contents {
+  width: 290px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.table-of-contents ul {
+  border: 2px silver dashed;
+  padding: 10px 10px 10px 30px;
+  font-size: 14px;
+}
+
+.table-of-contents li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.table-of-contents ol {
+  padding-left: 0;
+  border-bottom: solid 2px silver;
+  list-style-type: none;
+  font-size: 12px;
+}
+
+#relative {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.parent {
+  position: relative;
+  padding: 20px;
+}
+
+#absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#example {
+  position: relative;
+  padding: 0;
+  width: 50%;
+}
+
+#example img {
+  width: 50%;
+  transition: .5s;
+  box-shadow: -3px -3px;
+}
+
+#example img:hover {
+  opacity: 0.5;
+}
+
+#example span {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  color: white;
+  background: skyblue;
+  padding: 0 2px;
+  line-height: 1.5;
+}
+
+#fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background: #ffc778;
+  color: white;
+  z-index: 100;
+}
+
+#index {
+  position: relative;
+}
+
+.one, .two, .three {
+  position: absolute;
+  box-shadow: 3px 3px 3px gray;
+}
+
+.one {
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.two {
+  z-index: 50;
+  top: 20px;
+  left: 20px;
+}
+
+.three {
+  z-index: 40;
+  top: 40px;
+  left: 40px;
+}
+
+.overflow-exam {
+  white-space: normal;
+  width: 100px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background: skyblue;
+}
+
+.white-space_nowrap {
+  white-space: nowrap;
+  width: 100px;
+  background: skyblue;
+}
+
+.white-space {
+  white-space: normal;
+  width: 100px;
+  background: skyblue;
+}
+
+.white-space_preline {
+  white-space: pre-line;
+  width: 100px;
+  background: skyblue;
+}
+
+.white-space_pre {
+  white-space: pre;
+  width: 100px;
+  background: skyblue;
+}
+
+.white-space_prewrap {
+  white-space: pre-wrap;
+  width: 100px;
+  background: skyblue;
+}
+
+.tag-test {
+  width: 60px;
+  height: 200px;
+  background: orange;
+}
+
+table th, table td {
+  border: dashed 1px orange;
+}
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+  border: solid 2px orange;
+  width: 300px;
+}
+
+table th {
+  padding: 10px;
+  color: skyblue;
+  background: #fff5e5;
+}
+
+table td {
+  padding: 3px 10px;
+  color: gray;
+}
+
+.header-sample {
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+
+.header-sample:before {
+  content: "PORTFOLIO";
+  color: gray;
+  font-size: 2em;
+  display: block;
+}
+
+.header-navbar {
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
+
+h4 {
+  position: relative;
+  padding: 2em;
+  background: silver;
+}
+h4:before {
+  position: absolute;
+  content: 'ラベル';
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 0.2em;
+  background: #F89174;
+}
+
+.flow {
+  text-align: center;
+  list-style-type: none;
+}
+
+.flow li:not(:last-child):after{
+  font-family: 'FontAwesome';
+  content: '\f0a7';
+  display: block;
+  font-size: 2em;
+  color: skyblue;
+  padding: 0.3em;
+}
+
+.bubble {
+  position: relative;
+  background: orange;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.bubble:before {
+  position: absolute;
+  content: "";
+  border-top: 20px solid orange;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  top: 100%; /* 下固定 */
+  left: 50%; /* 中央へ */
+  transform: translateX(-50%);
+}
+
+.circle {
+  display: inline-block;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  background: skyblue;
+  color: #FFF;
+  transition: .3s;
+}
+
+.circle:hover {
+  background: silver;
+}
+
+.circle-border {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 50%;
+  border: solid 3px skyblue;
+}
+
+.gradation {
+  padding: 4em;
+  margin: 1em;
+  background: -moz-linear-gradient(top, #FFC778, #FFF);
+  background: -webkit-linear-gradient(top, #FFC778, #FFF);
+  background: linear-gradient(to bottom, #FFC778, #FFF);
+}
+
+.circle-gradation {
+  padding: 4em;
+  margin-top: 2em;
+  background: -moz-radial-gradient(#ffc778 20%, #f13f79 70%);
+  background: -webkit-radial-gradient(#ffc778 20%, #f13f79 70%);
+  background: radial-gradient(#ffc778 20%, #f13f79 70%);
+  box-shadow: 10px 10px 15px -10px; /* 影の広がりを調整し縮小させる */
+}
+
+.transparent-gradation {
+  padding: 4em;
+  margin-top: 2em;
+  background: -webkit-linear-gradient(top, #FFC778, transparent);
+  background: -moz-linear-gradient(top, #FFC778, transparent);
+  background: linear-gradient(to bottom, #FFC778, transparent);
+}
+
+.overlay-gradation {
+  background: -moz-linear-gradient(65deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)), url(./bear.jpg);
+  background: -webkit-linear-gradient(65deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)), url(./bear.jpg);
+  background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)), url(./bear.jpg);
+  background-size:cover;
+  /*以下グラデーションとは関係のない部分*/
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: #FFF;
+  box-shadow: 0 0 8px gray; /* 上下左右対象に影をぼかす */
+}
+
+.breadcrumb {
+  margin: 0;
+  padding: 1.1em 1em;
+  list-style: none;
+  background: #e9edf5;
+  overflow: hidden;
+}
+
+.breadcrumb li {
+  display: inline;/*横に並ぶように*/
+  list-style: none;
+}
+
+.breadcrumb li:after {
+  /* >を表示*/
+  font-family: FontAwesome;
+  content: '\f101';
+  padding: 0 0.2em;
+  color: #8186a0;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #273376;
+}
+
+.breadcrumb li:first-child a:before {/*家アイコンに*/
+  font-family: FontAwesome;
+  content: '\f015';
+  font-weight: normal;
+  font-size: 1.1em;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
