@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-bottom: solid 1px #e3e3e3;
+  color: #666;
+  padding: 10px 20px;
+}
+
+header h1 {
+  flex: 1;
+  text-align: center;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  border-right: solid 1px #e3e3e3;
+  padding: 20px;
+  width: 18rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 2rem;
+  border-top: 1px solid #e3e3e3;
+  order: 1;
+  line-height: 1;
+}
+
+.sidebar nav {
+  flex: 1;
+  overflow: auto;
+  padding-top: 1rem;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 0.25rem 0;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+
+  white-space: pre;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  gap: 1rem;
+  transition: background-color 100ms;
+}
+
+.sidebar nav a:hover {
+  background: #e3e3e3;
+}
+
+.sidebar nav a.active {
+  background: hsl(224, 98%, 58%);
+  color: white;
+}
+
+.sidebar nav a.pending {
+  animation: progress 2s infinite ease-in-out;
+  animation-delay: 200ms;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* PC */
+@media (width >= 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .sidebar {
+    transform: translateX(0);
+  }
+}
+
+/* mobile */
+@media (width < 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 40%;
+    transform: translateX(-100%);
+    z-index: 10;
+  }
+
+  #menu-toggle:checked ~ .container .sidebar {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    position: absolute;
+    left: -99999px;
+  }
+
+  .content {
+    padding-top: 60px;
+  }
+}
